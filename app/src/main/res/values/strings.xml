@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Sins of Memory Leaks</string>
+    <string name="instruction_check_for_leaks">Go back, force a GC and check HPROF for leaks</string>
+
+    <string name="title_memory_leaks_or_not">Is there a leak?</string>
+    <string name="title_memory_leak_via_static_reference">Leak through static references</string>
+    <string name="title_leak_through_long_running_tasks">Leak through long running tasks</string>
+
+    <string name="text_google_example">Leaking activity context or not?</string>
+    <string name="text_leak_to_singleton">Leaking activity context to a singleton object</string>
+    <string name="text_leak_to_static_view">Leaking activity to static view</string>
+    <string name="text_leak_to_static_variable">Leaking activity to static variable</string>
+    <string name="text_leak_to_instance_inner_class">Static variable to an instance of inner class</string>
+    <string name="text_leak_to_thread">Leak activity through inner class runnable Thread</string>
+    <string name="text_leak_to_handler">Leak activity through inner class runnable Handler</string>
+    <string name="text_leak_to_async_task">Leak activity through anonymous class of AsyncTask</string>
+    <string name="text_leak_thread">Leak threads</string>
+</resources>
