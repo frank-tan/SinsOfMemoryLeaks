@@ -8,9 +8,8 @@ import android.widget.TextView;
 import com.franktan.memoryleakexamples.R;
 
 public class LeakActivityToStaticVariableActivity extends AppCompatActivity {
-    // FIXME: 2/26/17 static reference to the activity will leak the activity.
-    // To fix it, set it null onDestroy or use weak reference
-    static Activity activity = null;
+    // FIXED: remove static keyword. If it has to be static for whatever valid reason, use WeakReference
+    private Activity activity = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

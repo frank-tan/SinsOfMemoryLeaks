@@ -16,6 +16,12 @@
         android:orientation="vertical"
         tools:context="com.franktan.memoryleakexamples.MainActivity">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/message_branch"
+            android:textColor="@color/colorAccent"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

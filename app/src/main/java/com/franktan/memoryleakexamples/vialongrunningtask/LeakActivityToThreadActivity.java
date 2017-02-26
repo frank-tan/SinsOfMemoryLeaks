@@ -8,20 +8,29 @@ import com.franktan.memoryleakexamples.R;
 
 public class LeakActivityToThreadActivity extends AppCompatActivity {
 
+    private MyThread myThread = new MyThread();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_leak_to_runnable);
 
-        new MyThread().start();
+        myThread.start();
     }
 
-    // FIXME: non-static anonymous classes hold an implicit reference to their enclosing class.
-    // Fix is to make it static. Also, close thread in activity onDestroy() to avoid thread leak. See `LeakThreadsActivity`
-    private class MyThread extends Thread {
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // FIXED: kill the thread in activity onDestroy
+        myThread.interrupt();
+    }
+
+    // FIXED: make it static. So it does not have referenced to the containing activity class
+    private static class MyThread extends Thread {
         @Override
         public void run() {
-            while (true) {
+            // FIXED: check interrupted before the next loop
+            while (!isInterrupted()) {
                 SystemClock.sleep(1000);
             }
         }

@@ -15,4 +15,5 @@
     <string name="text_leak_to_handler">Leak activity through inner class runnable Handler</string>
     <string name="text_leak_to_async_task">Leak activity through anonymous class of AsyncTask</string>
     <string name="text_leak_thread">Leak threads</string>
+    <string name="message_branch">You are running the FIXED branch. The memory leaks are fixed in this version. To see the leaks, switch to master branch and run</string>
 </resources>

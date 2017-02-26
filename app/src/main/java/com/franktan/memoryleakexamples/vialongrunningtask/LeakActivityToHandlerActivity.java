@@ -10,12 +10,8 @@ import com.franktan.memoryleakexamples.R;
 
 public class LeakActivityToHandlerActivity extends AppCompatActivity {
 
-    private final Handler mLeakyHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            Log.e("FRANK", "handle message");
-        }
-    };
+    private final Handler mLeakyHandler = new MyHandler();
+    private final MyRunnable myRunnable = new MyRunnable();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +19,29 @@ public class LeakActivityToHandlerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_leak_to_handler);
 
         // Post a message and delay its execution for 10 minutes.
-        mLeakyHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Log.e("FRANK", "in run()");
-            }
-        }, 1000 * 60 * 10);
+        mLeakyHandler.postDelayed(myRunnable, 1000 * 60 * 10);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // FIXED: remove callback in activity onDestroy
+        mLeakyHandler.removeCallbacks(myRunnable);
+    }
+
+    // FIXED: use static class instead of inner class. static class does not have reference to the containing activity
+    private static class MyRunnable implements Runnable {
+        @Override
+        public void run() {
+            Log.e("FRANK", "in run()");
+        }
+    }
+
+    // FIXED: use static class instead of inner class. static class does not have reference to the containing activity
+    private static class MyHandler extends Handler {
+        @Override
+        public void handleMessage(Message msg) {
+            Log.e("FRANK", "handle message");
+        }
     }
 }

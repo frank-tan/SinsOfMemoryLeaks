@@ -19,18 +19,12 @@ public class LeakThreadsActivity extends AppCompatActivity {
     }
 
     private static class LeakedThread extends Thread {
-        private boolean mRunning = false;
 
         @Override
         public void run() {
-            mRunning = true;
-            while (mRunning) {
+            while (!isInterrupted()) {
                 SystemClock.sleep(1000);
             }
-        }
-
-        public void close() {
-            mRunning = false;
         }
     }
 
@@ -38,6 +32,6 @@ public class LeakThreadsActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         // FIXME: 2/26/17 uncomment the line to fix the thread leak
-        mThread.close();
+        mThread.interrupt();
     }
 }

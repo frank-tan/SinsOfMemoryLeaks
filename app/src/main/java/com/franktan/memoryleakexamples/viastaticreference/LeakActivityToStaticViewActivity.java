@@ -8,8 +8,8 @@ import com.franktan.memoryleakexamples.R;
 
 public class LeakActivityToStaticViewActivity extends AppCompatActivity {
 
-    // FIXME: 2/26/17 static view will leak the activity. To fix it, make it non-static
-    static TextView label;
+    // FIXED: make it non-static
+    private TextView label;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
