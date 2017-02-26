@@ -16,7 +16,8 @@ public class LeakActivityToStaticViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         label = new TextView(this);
-        label.setText(getString(R.string.instruction_check_for_leaks));
+        label.setText("The original activity in LEAK branch leaks activity to a static view instance. The leaks has been fixed in this branch.\n\n"
+                + getString(R.string.instruction_check_for_leaks));
 
         setContentView(label);
     }
