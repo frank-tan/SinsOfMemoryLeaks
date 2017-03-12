@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="The original activity in LEAK branch leaks activity instance to Anonymous class of AsyncTask. The leaks have been fixed in this branch."
+        android:text="@string/leak_explanation_async_task"
         android:textColor="@color/colorAccent" />
 
     <TextView

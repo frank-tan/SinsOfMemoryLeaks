@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="The original activity in LEAK branch leaks activity to handler and runnable inner class. The leaks have been fixed in this branch."
+        android:text="@string/leak_explanation_handler"
         android:textColor="@color/colorAccent" />
 
     <TextView
