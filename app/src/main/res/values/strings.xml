@@ -19,10 +19,12 @@
     <string name="message_branch">WARNING: You are running the LEAK branch. There are memory leaks in this version. To see the fixes, switch to FIXED branch and run app.</string>
     
     <string name="google_leak_not">Google says passing activity context to a dynamically created view causes a memory leak in a 2009 post. Does it still cause a leak in v19+?\n\n%1$s</string>
-    <string name="leak_explanation_singleton">The original activity in LEAK branch leaks activity to a singleton manager. The leaks have been fixed in this branch.</string>
-    <string name="leak_explanation_static_instance">The original activity in LEAK branch leaks the activity to a static instance. The leaks have been fixed in this branch.</string>
-    <string name="leak_explanation_static_variable">The original activity in LEAK branch leaks activity to a static variable of an inner class. The leaks have been fixed in this branch.</string>
-    <string name="leak_explanation_async_task">The original activity in LEAK branch leaks activity instance to Anonymous class of AsyncTask. The leaks have been fixed in this branch.</string>
-    <string name="leak_explanation_handler">The original activity in LEAK branch leaks activity to handler and runnable inner class. The leaks have been fixed in this branch.</string>
-    <string name="leak_explanation_static_view">The original activity in LEAK branch leaks activity to a static view instance. The leaks has been fixed in this branch.\n\n%1$s</string>
+    <string name="leak_explanation_singleton">This activity leaks activity to a singleton manager.</string>
+    <string name="leak_explanation_static_instance">This activity leaks the activity to a static instance.</string>
+    <string name="leak_explanation_static_variable">This activity leaks activity to a static variable of an inner class.</string>
+    <string name="leak_explanation_async_task">This activity leaks activity instance to Anonymous class of AsyncTask.</string>
+    <string name="leak_explanation_handler">This activity leaks activity to handler and runnable inner class.</string>
+    <string name="leak_explanation_static_view">This activity leaks activity to a static view instance.\n\n%1$s</string>
+    <string name="leak_explanation_leak_threads">This activity starts threads but does not terminate them when destroyed.</string>
+    <string name="leak_explanation_runnable">This activity creates and starts long running runnable as an inner class, which leaks the activity instance.</string>
 </resources>

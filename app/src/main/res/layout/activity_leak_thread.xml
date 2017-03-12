@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="This original activity in LEAK branch starts threads but does not terminate them when destroyed. The leaks have been fixed in this branch."
+        android:text="@string/leak_explanation_leak_threads"
         android:textColor="@color/colorAccent" />
 
     <TextView

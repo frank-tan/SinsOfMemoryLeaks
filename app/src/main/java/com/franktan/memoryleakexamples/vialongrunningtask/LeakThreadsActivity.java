@@ -38,6 +38,6 @@ public class LeakThreadsActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         // FIXME: 2/26/17 uncomment the line to fix the thread leak
-        mThread.close();
+        //mThread.close();
     }
 }
