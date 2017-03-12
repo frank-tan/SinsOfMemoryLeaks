@@ -14,7 +14,7 @@ public class LeakActivityOrNot extends AppCompatActivity {
         // a 2009 post https://android-developers.googleblog.com/2009/01/avoiding-memory-leaks.html
         // Does it still cause a leak now?
         TextView label = new TextView(this);
-        label.setText("Does it still cause a leak?\n\n" + getString(R.string.instruction_check_for_leaks));
+        label.setText(getString(R.string.google_leak_not, getString(R.string.instruction_check_for_leaks)));
 
         setContentView(label);
     }

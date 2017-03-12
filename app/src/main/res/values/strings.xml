@@ -16,4 +16,5 @@
     <string name="text_leak_to_async_task">Leak activity through anonymous class of AsyncTask</string>
     <string name="text_leak_thread">Leak threads</string>
     <string name="message_branch">WARNING: You are running the LEAK branch. There are memory leaks in this version. To see the fixes, switch to FIXED branch and run app.</string>
+    <string name="google_leak_not">Google says passing activity context to a dynamically created view causes a memory leak in a 2009 post. Does it still cause a leak in v19+?\n\n%1$s</string>
 </resources>
