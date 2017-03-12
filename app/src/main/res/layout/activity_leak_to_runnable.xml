@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="This original activity in LEAK branch creates and starts long running runnable as an inner class, which leaks the activity instance. The leaks has been fixed in this branch."
+        android:text="@string/leak_explanation_runnable"
         android:textColor="@color/colorAccent" />
 
     <TextView
