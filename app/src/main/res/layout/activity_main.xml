@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,23 +8,29 @@
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical"
         tools:context="com.franktan.memoryleakexamples.MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/message_branch"
+            android:textColor="@color/colorAccent" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/thinking"/>
+                android:src="@drawable/thinking" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -39,18 +44,18 @@
             android:id="@+id/buttonLeakActivityContextOrNot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_google_example"/>
+            android:text="@string/text_google_example" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/devil2"/>
+                android:src="@drawable/devil2" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -64,66 +69,67 @@
             android:id="@+id/buttonLeakActivityStaticView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_leak_to_static_view"/>
+            android:text="@string/text_leak_to_static_view" />
 
         <Button
             android:id="@+id/buttonLeakActivityStaticVariable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_leak_to_static_variable"/>
+            android:text="@string/text_leak_to_static_variable" />
 
         <Button
             android:id="@+id/buttonLeakActivityToSingleton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_leak_to_singleton"/>
+            android:text="@string/text_leak_to_singleton" />
 
         <Button
             android:id="@+id/buttonLeakActivityToStaticVariableToInnerClass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_leak_to_instance_inner_class"/>
+            android:text="@string/text_leak_to_instance_inner_class" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/devil3"/>
+                android:src="@drawable/devil3" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="@string/title_leak_through_long_running_tasks"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
         </LinearLayout>
 
         <Button
             android:id="@+id/buttonLeakActivityToThread"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_leak_to_thread"/>
+            android:text="@string/text_leak_to_thread" />
 
         <Button
             android:id="@+id/buttonLeakActivityToHandler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_leak_to_handler"/>
+            android:text="@string/text_leak_to_handler" />
 
         <Button
             android:id="@+id/buttonLeakActivityToAsyncTask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_leak_to_async_task"/>
+            android:text="@string/text_leak_to_async_task" />
 
         <Button
             android:id="@+id/buttonLeakThread"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_leak_thread"/>
+            android:text="@string/text_leak_thread" />
     </LinearLayout>
 </ScrollView>

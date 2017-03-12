@@ -15,4 +15,5 @@
     <string name="text_leak_to_handler">Leak activity through inner class runnable Handler</string>
     <string name="text_leak_to_async_task">Leak activity through anonymous class of AsyncTask</string>
     <string name="text_leak_thread">Leak threads</string>
+    <string name="message_branch">WARNING: You are running the LEAK branch. There are memory leaks in this version. To see the fixes, switch to FIXED branch and run app.</string>
 </resources>
