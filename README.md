@@ -3,8 +3,14 @@ This app shows common patterns of memory leaks in Android development and how to
 
 LEAK Branch                |  FIXED Branch
 :-------------------------:|:-------------------------:
-![alt tag](screenshots/leak.png)  |  ![alt tag](screenshots/fixed.png)
+<img alt="Leak app screenshot" src="screenshots/leak.png" width="400px"/>  |  <img alt="Leak fixed app screenshot" src="screenshots/fixed.png" width="400px"/>
 
-**Warning:** this app contains various memory leaks. It is intended for Android developers' study purpose only. The author does not take any responsibility for any potential damage to your devices.
+## Build
+Two branches have different app ids which allow them to co-exist on the same device or emulator.
+
+<img alt="Launcher icons for both apps" src="screenshots/launcher.png" width="400px"/>
+
+##Warning
+This app contains various memory leaks. It is intended for Android developers' study purpose only. The author does not take responsibility for any potential damage to your devices.
 
 I am going to write an artical about the examples in this app. Stay tuned in this space...
