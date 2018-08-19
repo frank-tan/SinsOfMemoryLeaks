@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Leaks Examples</string>
+    <string name="leak_canary_display_activity_label">Leaks Examples Canary</string>
     <string name="instruction_check_for_leaks">Go back, force a GC and check HPROF for leaks</string>
 
     <string name="title_memory_leaks_or_not">Is there a leak?</string>
